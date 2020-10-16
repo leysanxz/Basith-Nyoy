@@ -1,0 +1,63 @@
+class student {
+  constructor({ name, age, dateOfBirth, gender, studentId, hobbies }) {
+    this.name = name;
+    this.age = age;
+    this.dateOfBirth = dateOfBirth;
+    this.studentId = studentId;
+    this.hobbies = hobbies;
+    switch (gender) {
+      case "Male":
+        this.gender = gender;
+        break;
+      case "Female":
+        this.gender = gender;
+        break;
+      default:
+        this.gender = "not Valid";
+    }
+  }
+
+  setName(name) {
+    this.name = name;
+  }
+  setAge(age) {
+    this.age = age;
+  }
+  setDateOfBirth(dateOfBirth) {
+    this.DateOfBirth = dateOfBirth;
+  }
+  setGender(gender) {
+    switch (gender) {
+      case "Male":
+        this.gender = gender;
+        break;
+      case "Female":
+        this.gender = gender;
+        break;
+      default:
+        this.gender = "not Valid";
+    }
+  }
+  addHobby(hobby) {
+    this.hobbies.push(hobby);
+  }
+  removeHobby(hobby) {
+    const index = this.hobbies.indexOf(hobby);
+    this.hobbies.splice(index, 1);
+  }
+  getData() {
+    return this;
+  }
+}
+
+const basith = new student({
+  name: "Basith Arsalan",
+  age: "28",
+  dateOfBirth: "15 August 1992",
+  gender: "Male",
+  studentId: "67312",
+  hobbies: ["Gaming", "Photography", "Travelling"],
+});
+
+console.log(basith);
+basith.setDateOfBirth("15 Agustus 1992");
