@@ -5,12 +5,12 @@ class student {
     this.dateOfBirth = dateOfBirth;
     this.studentId = studentId;
     this.hobbies = hobbies;
-    switch (gender) {
-      case "Male":
-        this.gender = gender;
+    switch (gender.toLowerCase()) {
+      case "male":
+        this.gender = 'Male';
         break;
-      case "Female":
-        this.gender = gender;
+      case "female":
+        this.gender = 'Female';
         break;
       default:
         this.gender = "not Valid";
@@ -27,12 +27,12 @@ class student {
     this.DateOfBirth = dateOfBirth;
   }
   setGender(gender) {
-    switch (gender) {
-      case "Male":
-        this.gender = gender;
+    switch (gender.toLowerCase()) {
+      case "male":
+        this.gender = 'Male';
         break;
-      case "Female":
-        this.gender = gender;
+      case "female":
+        this.gender = 'Female';
         break;
       default:
         this.gender = "not Valid";
@@ -54,9 +54,10 @@ const basith = new student({
   name: "Basith Arsalan",
   age: "28",
   dateOfBirth: "15 August 1992",
-  gender: "Male",
+  gender: "MaLe",
   studentId: "67312",
   hobbies: ["Gaming", "Photography", "Travelling"],
 });
 
 console.log(basith);
+basith.setDateOfBirth("15 Agustus 1992");
