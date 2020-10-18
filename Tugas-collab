@@ -60,4 +60,3 @@ const basith = new student({
 });
 
 console.log(basith);
-basith.setDateOfBirth("15 Agustus 1992");
